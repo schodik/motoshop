@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мотомагазин</title>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div id="info_top">
+<!-- Добавьте разметку для корзины -->
+    <div id="cart" class="cart-hidden">
+    <h2>Корзина</h2>
+    <ul id="cart-items">
+      <!-- Здесь будут отображаться добавленные товары -->
+    </ul>
+    <p id="cart-total">0 Рублей</p>
+    <button id="clear-cart">Очистить корзину</button><p></p>
+    <a href="./Zakaz.html" id="clear-cart">Оформить заказ</a>
+    
+  </div>
+  
+    </div>
+    <div class="page">
+        <div class="page__container">
+          <a href="#popup-article" class="open-popup">One motorbike — a lifetime</a>
+        </div>
+      </div>
+      <div id="popup-article" class="popup">
+        <div class="popup__container">
+          <a href="#" class="popup__close">
+            <span class="screen-reader">close</span>
+          </a>  
+          <div class="popup__content">
+            <h1 class="popup__title r-title">Добро пожаловать в One Motorbike — магазин, где мечты о мотоциклах становятся реальностью! Мы являемся вашим идеальным партнером для всех потребностей в мире мотоциклов.
+
+                <p>One Motorbike — это не просто магазин. Это место, где страсть к двухколесным аппаратам переплетается с мастерством и непревзойденным качеством. Мы предлагаем самый широкий ассортимент мотоциклов ведущих брендов, которые подходят как для начинающих райдеров, так и для опытных профессионалов.
+                
+                    <p>Наши клиенты получают возможность выбирать из впечатляющего ассортимента моделей, от классических и элегантных круизеров до мощных спортивных байков, от практичных эндуро до стильных городских скутеров. Все наши мотоциклы обладают непревзойденным дизайном, передовыми технологиями и надежностью, чтобы гарантировать незабываемые приключения на дорогах.
+                
+                        <p>Мы гордимся тем, что каждый клиент One Motorbike получает не только превосходное транспортное средство, но и личное внимание, индивидуальный подход и качественное обслуживание. Наша команда экспертов всегда готова предоставить вам исчерпывающую информацию о каждой модели, помочь с выбором оптимального варианта и обеспечить вас необходимыми аксессуарами и запчастями.
+                
+                            <p>В One Motorbike мы верим, что мотоцикл — это не просто средство передвижения, это стиль жизни. Поэтому мы стремимся создать пространство, где любители мотоциклов могут находиться вместе, обмениваться опытом, находить вдохновение и учиться новому. Мы организуем мероприятия, поездки и встречи, чтобы вы могли раскрыть свою страсть к движению на мотоцикле и делиться этим с другими единомышленниками.
+                
+                                <p>В One Motorbike мы стремимся стать вашим надежным партнером на всем пути мотоциклиста — от покупки и обслуживания до улучшения и модернизации
+                
+                 вашего двухколесного друга. Не важно, новичок вы или опытный гонщик, у нас есть все, чтобы удовлетворить ваши потребности и превзойти ваши ожидания.
+                
+                 <p>Остановитесь в One Motorbike и откройте новую главу в своей мотоциклетной истории. Разделитесь с нами страстью к приключениям на двух колесах, и мы поможем вам обрести мотоцикл вашей мечты — на всю жизнь.
+          </div>
+        </div>
+      </div>
+      
+    <div class="container">
+        <div class="imgBx">
+            <img src="./image/boxerBlue.png">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Bajaj Boxer 125x<br></h2>
+                <p>Один из самых практичных и надежных мотоциклов в экономичном классе. По своим характеристикам, он идеален для начинающих мотоциклистов до 18 лет. Отлично подходит для использования в сельской местности.</p>
+                <h3>125 000 р.</h3>
+                <button onclick="addToCart({ name: 'Bajaj Boxer 125x ', price: 125000 })">Добавить в корзину</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="imgBx">
+            <img src="./image/dominar.png" width="500" height="500">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Honda CBR 1000 RR/RA Fireblade<br></h2>
+                <p>Быть первым – главная цель создания нового спортивного мотоцикла Honda CBR1000RR-R Fireblade. Имя Fireblade гремит на гоночных треках уже почти три десятилетия, но абсолютно новое поколение делит историю модели на «до» и «после». Никогда прежде серийные спортбайки Honda не обладали такой энерговооруженностью и арсеналом электронных помощников, никогда технологии, рожденные на треке, не были настолько близки к Вам.</p>
+                <button onclick="addToCart({ name: 'Honda CBR 1000 RR/RA Fireblade ', price: 750000 })">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="imgBx">
+            <img src="./image/KTM.png" width="400" height="400">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2> KTM RC 390<br></h2>
+                <p>Бескомпромиссный, усовершенствованный, мотоцикл не для всех, но для Вас. Новый КТМ 390 RC. Впечатляющий пакет технологий, превосходная управляемость и захватывающая мощность — настоящий гонщик с выдающейся родословной. </p>
+                <h3>700 000 р.</h3>
+                <button onclick="addToCart({ name: 'KTM RC 390 ', price: 700000 })">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="section-plans" id="section-plans">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+          </h2>
+        </div>
+  
+        <div class="rowb">
+          <div class="col-1-of-3">
+            <div class="cardb">
+              <div class="cardb__side cardb__side--front-1">
+                <div class="cardb__title cardb__title--1">
+                  <h4 class="cardb__heading">Почему мы</h4>
+                </div>
+  
+                <div class="cardb__details">
+                </div>
+              </div>
+              <div class="cardb__side cardb__side--back cardb__side--back-1">
+                <div class="cardb__cta">
+                  <div class="cardb__price-box">
+                    <p class="cardb__price-value">Это про нас</p>
+                    <p class="cardb__price-only">
+                        <h3> <li>Качество и надёжность</li>
+                         <li>Общительный персонал</li>
+                         <li>Лидирующие место на рынке</li> </h3>
+                     </p>
+                  </div>
+                  <a href="./indexWM.html" class="btnb btn--white">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-1-of-3">
+            <div class="cardb">
+              <div class="cardb__side cardb__side--front-2">
+                <div class="cardb__title card__title--2">
+          
+                  <h4 class="cardb__heading">Контакты магазина</h4>
+                </div>
+  
+                <div class="cardb__details">
+                 <h3><ul>
+                    <li>Спартака 26А</li>
+                    <li>+7 910 532 92 89</li>
+                    <li>+7 996 133 80 13</li>
+                </h3> 
+                  </ul>
+                </div>
+              </div>
+              <div class="cardb__side cardb__side--back cardb__side--back-2">
+                <div class="cardb__cta">
+                  <div class="cardb__price-box">
+                    <p class="cardb__price-only">Местоположение</p>
+                    <p class="cardb__price-value"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1782.3911304303276!2d35.88225857416861!3d56.85036639924205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b6871efa6e2ae5%3A0x20b7a74abacaea39!2z0JLRi9GB0YjQsNGPINGI0LrQvtC70LAg0L_RgNC10LTQv9GA0LjQvdC40LzQsNGC0LXQu9GM0YHRgtCy0LA!5e0!3m2!1sru!2sfr!4v1685546061042!5m2!1sru!2sfr" width="500" height="400" style="border:0;" porderradius allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                  </div>
+                  <a href="https://goo.gl/maps/djLKUa5hR5U8LKH48" class="btnb btn--white">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-1-of-3">
+            <div class="cardb">
+              <div class="cardb__side cardb__side--front-3">
+                <div class="cardb__title cardb__title--3">
+                  <h4 class="cardb__heading">Система скидок</h4><p>
+                    Условия для скидки:
+                  </p>
+                </div>
+  
+                <div class="cardb__details">
+                  <ul>
+                    <li>16 лет</li>
+                    <li>А1 категория</li>
+                    <li>До 125 кубов</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cardb__side cardb__side--back cardb__side--back-3">
+                <div class="cardb__cta">
+                  <div class="cardb__price-box">
+                    <p class="cardb__price-only">Только сейчас</p>
+                    <p class="cardb__price-value">15%</p>
+                  </div>
+                  <a href="./indexWM.html" class="btnb btn--white">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="u-center-text u-margin-top-huge">
+          <a href="#" class="btnb btn--green">↑</a>
+        </div>
+      </section>
+      <div id="info_bottom">
+        © 2023 - 2023
+        Мотоэкипировка, запчасти, расходники, аксессуары<br>
+        Предложение носит информационный характер<br>
+        и не является публичной офертой<br>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

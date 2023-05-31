@@ -1,0 +1,509 @@
+body{
+    background-image: url(https://bajajrussia.ru/upload/iblock/fed/mv107w53zf6cptq7msamdid6nzqslhhd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   }
+  
+  article {
+    --line: #a21a3e;
+    --skin: #f7d9d9;
+    --skin-mid: #e7b9b9;
+    --skin-dark: #ea9aa3;
+    font-size: 1vmin;
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 25em;
+    aspect-ratio: 4/5;
+  }
+  
+  article *,
+  article *::before,
+  article *::after {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  @keyframes nod {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(-10deg); }
+  }
+  
+  .head {
+    animation: nod 1s linear infinite;
+    --angle: -11deg;
+    width: 60%;
+    height: 37.5%;
+    top: 5%;
+    left:13%;
+    transform: rotate(var(--angle));
+    transform-origin: 95% 20%;
+  }
+  
+  .face {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--skin);
+    border-radius: 105% 95% 95% 95% / 125% 115% 80% 75%;
+    border: 0.5em solid var(--line);
+    clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
+    border-left-width: 0.6em;
+    border-bottom-width: 0.7em;
+    box-shadow:
+      inset 0 1em #fff4,
+      inset 0 -0.75em #f001;
+  }
+  
+  .eye {
+    width: 8.5%;
+    height: 17%;
+    background: 
+  /*     radial-gradient(circle at 50% 10%, #fff 4%, #fff0 0), */
+      radial-gradient(circle at 36% 30%, #fff 20%, #fff0 0),
+      radial-gradient(circle at 68% 75%, #fff 10%, #fff0 0),
+      var(--line);
+    border-radius: 50%;
+    transform: rotate(calc(-0.7 * var(--angle)));
+    top: 47%;
+    left: 9%;
+  }
+  
+  .eye + .eye {
+    left: 53%;
+    top: 48%;
+  }
+  
+  .mouth {
+    width: 12%;
+    height: 10%;
+    border-radius: 100% / 40% 40% 150% 150%;
+    top: 61%;
+    left: 28%;
+    transform: rotate(-4deg);
+    box-shadow: 0 0.5em 0 0.25em var(--line)
+  }
+  
+  .cheek {
+    width:14%;
+    height: 10%;
+    background: 
+      repeating-linear-gradient(-45deg, #0000 0 15%, #f003 0 26%),
+      #f003;
+    background-clip: content-box;
+    border-radius: 50%;
+    border: 0.5em solid #f003;
+    top: 60%;
+    left: 1%;
+    transform: rotate(-8deg);
+  }
+  
+  .cheek + .cheek {
+    top: 60%;
+    left: 55%;
+  }
+  
+  .body {
+    width: 47%;
+    height: 67%;
+    border: 0.5em solid var(--line);
+    border-left: 0;
+    border-radius: 0 100% 100% 0 / 50% 60% 50% 50%;
+    top: 10%;
+    left: 46%;
+    background: var(--skin);
+    clip-path: polygon(75% 0, 100% 0,100% 100%, 20% 100%, -50% 50%, -100% 70%, -100% 30%);
+    box-shadow: inset -0.75em 0.5em #fff4;
+    
+    &::before {
+      content: "";
+      width: 14%;
+      height: 20%;
+      border-top: 0.2em solid #fff0;
+      border-right: 0.5em solid var(--line);
+      border-radius: 50%;
+      top: 50%;
+      left: -13%;
+      transform: rotate(-10deg);
+      box-shadow: 1em 0 0 0.5em var(--skin);
+    }
+    
+    &::after {
+      content: "";
+      width: 25%;
+      height: 10%;
+      border: 0.1em solid #0000;
+      border-left: 0.4em solid var(--line);
+      border-radius: 50% / 100%;
+      top: 66.5%;
+      left: 5.5%;
+      transform: rotate(-20deg);
+      filter: drop-shadow(-1.25em 0.5em var(--line))
+    }
+  }
+  
+  .horn {
+    color: var(--line);
+    border: 0.5em solid var(--line);
+    border-radius:  100%;
+    width: 30%;
+    height: 35%;
+    background:  var(--skin-dark);
+  }
+  
+  .horn-1 {
+    left: 2.5%; 
+    top: 10%;
+    transform: rotate(-25deg);
+  }
+  
+  .horn-2 {
+    top: 25%;
+    transform: rotate(-45deg) scale(1.05);
+    left: -3%;
+  }
+  
+  .horn-3 {
+    top: 40%;
+    transform: rotate(-70deg) scale(0.8) skew(15deg);
+    left: -8%;
+  }
+  
+  .horn-4 {
+    transform: scaleX(-1) rotate(30deg);
+    left: 72%;
+    top: 15%;
+  }
+  
+  .horn-5 {
+    transform: scaleX(-1) rotate(-10deg) scale(0.94);
+    width: 30%;
+    height: 38%;
+    left: 80%;
+    top: 32%;
+  }
+  
+  .horn-6 {
+    transform: scaleX(-1) rotate(-40deg) scale(0.84);
+    width: 30%;
+    height: 38%;
+    left: 70%;
+    top: 55%;
+  }
+  
+  .gill {
+    width: 60%;
+    height: 78%;
+    background: linear-gradient(90deg, #0000 65%, var(--skin) 0);
+    border-radius: 35% 35% 50% 35% / 50%;
+    right: 7%;
+    top: 18%;
+    box-shadow: inset -1em 0 0 -0.5em var(--line)
+  }
+  
+  .hand {
+    --c: var(--skin);
+    width: 33%;
+    height: 29%;
+  /*   background: 
+      radial-gradient(100% 70% at 100% 50%, #0000 75%, #000 0 99%, #0000 0) 0 0 / 30% 77%,
+      radial-gradient(100% 70% at 0% 50%, #0000 80%, #000 0 99%, #0000 0) 100% 0 / 30% 90%,
+      radial-gradient(farthest-side at 50% 20%, #0000 62%, #000 0 99%, #0000 0) 15% 100% / 25% 30%,
+      radial-gradient(farthest-side at 50% 20%, #0000 60%, #000 0 99%, #0000 0) 45% 95% / 20% 30%,
+      radial-gradient(farthest-side at 50% 20%, #0000 60%, #000 0 99%, #0000 0) 70% 95% / 20% 30%,
+      #fff;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 3em #fff;
+    filter: blur(0.35em) contrast(20);
+    mix-blend-mode: multiply;
+    transform: scale(0.8) */
+    background:
+      radial-gradient(farthest-side at 50% 25%, var(--c) 78%, #0000 80%),
+      radial-gradient(farthest-side at 50% 20%, var(--c) 96%, #0000 99%) 40% 100% / 22% 25%
+      ;
+    background-repeat: no-repeat;
+    color: var(--line);
+    filter:
+      drop-shadow(-0.3em 0.2em)
+      drop-shadow(0.3em 0.2em)
+      drop-shadow(-0.1em 0.1em)
+      drop-shadow(0.1em 0.01em)
+      ;
+    clip-path: polygon(-10% 30%, 110% 20%, 110% 110%, -10% 110%);
+    
+    &::before {
+      content: "";
+      width: 18%;
+      height: 35%;
+      border-radius: 50%;
+      background: var(--c);
+      border-radius: 50%;
+      bottom: 5%;
+      left: 15%;
+      transform: rotate(30deg)
+    }
+    
+    &::after {
+      content: "";
+      width: 20%;
+      height: 35%;
+      border-radius: 50%;
+      background: var(--c);
+      border-radius: 50%;
+      bottom: 5%;
+      right: 15%;
+      transform: rotate(-30deg);
+      box-shadow:
+        -1.4em 0.1em var(--c)
+    }
+  }
+  
+  .hand-1 {
+    top: 47%;
+    left: 58%;
+    transform: scaleX(-1) rotate(-20deg)
+  }
+  
+  .hand-2 {
+    top: 49%;
+    left: 7%;
+    transform: rotate(-30deg)
+  }
+  
+  .tail {
+    width: 45%;
+    height: 60%;
+    transform-origin: 50% 100%;
+    transform: rotate(42deg);
+    bottom: 5%;
+    left: 7%;
+    border-radius: 100% / 120% 120% 90% 90%;
+    color: vaR(--line);
+    box-shadow: 
+  /*     inset 13em 4em 0 -2em var(--skin),  */
+      inset 4em -2em var(--skin),
+      -9.25em -14em 0 -8em var(--skin);
+    filter:
+      drop-shadow(-0.3em 0.2em)
+      drop-shadow(0.2em 0.2em)
+      drop-shadow(-0.1em 0.2em)
+      drop-shadow(0.4em 0.01em)
+      drop-shadow(0.2em -0.2em)
+      ;
+    background: 
+  /*     radial-gradient(10% 10% at 80% 80%, var(--skin) 99%, #0000), */
+      #0000;
+    overflow: hidden;
+    
+    &::before {
+      content: "";
+      width: 15%;
+      height: 25%;
+      background: var(--skin);
+      right: 15%;
+      bottom: 0;
+      border-radius: 100% / 80% 80% 120% 120%;
+      transform: rotate(30deg)
+    }
+    
+    &::after {
+      content: "";
+      width: 45%;
+      height: 50%;
+      right: 3.5%;
+      bottom: 13%;
+      border-radius: 100% / 100%;
+      transform: rotate(34deg);
+      box-shadow: -3em 3em 0 8em var(--skin);
+      clip-path: polygon(-500% 40%, 0 40%, 100% 76%, 130% 300%, 0 300%)
+    }
+    
+    .hand-1 {
+      width: 35%;
+      left: 5%;
+      top: 44%;
+      transform: rotate(-40deg);
+      z-index: 1;
+    }
+    
+    .hand-2 {
+      --c: var(--skin-mid);
+      width: 35%;
+      left: 50%;
+      top: 35%;
+      transform: rotate(-20deg);
+      clip-path: none;
+      z-index: 1;
+      filter: none;
+    }
+  }
+  
+  .tail-deco-1 {
+    width: 60%;
+    height: 42%;
+    background: var(--skin);
+    border-radius: 100% / 130% 80% 80% 100%;
+    border: 0.4em solid var(--line);
+    box-shadow: inset 0 0 0 1000em #c002;
+    atransform: rotate(15deg);
+    bottom: 0.5%;
+    left: 17%;
+    clip-path: polygon(0 0, 45% 0, 20% 50%, 40% 100%, 0 100%)
+  }
+  
+  .tail-deco-2 {
+    width: 30%;
+    height: 16%;
+    border-radius: 50%;
+    transform: rotate(-40deg);
+    bottom: 5%;
+    left: 30%;
+    box-shadow:
+      inset 6.75em 2.25em #c002,
+      inset 6.75em 2.25em var(--skin),
+      inset 7em 2.5em var(--line);
+    
+  }
+  
+  .headset {
+    width: 40%;
+    height: 55%;
+    background: #555;
+    border: 0.6em solid #000;
+    border-radius: 50%;
+  }
+  
+  .headset-1 {
+    top: 20%;
+    left: 80%;
+  }
+  
+  .headset-2 {
+    left: -10%;
+    top: 17%;
+  }
+  
+  .headset-band {
+    width: 105%;
+    height: 60%;
+    border-radius: 50% / 100% 100% 0 0;
+    border: 0.5em solid;
+    left: 50%;
+    transform: translatE(-50%, -50%);
+    border-bottom: 0;
+    box-shadow: inset 0 1.75em 0 1.5em #333, inset 0 2em 0 1.75em #000;
+    
+  }
+  
+  .headset-band-1 { 
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%); 
+  -webkit-mask: linear-gradient(90deg, #0000 42%, #000 0);
+  }
+  
+  @keyframes music {
+    0%, 20% { opacity: 0; transform: translate(0, 200%); } 
+    100% { opacity: 1; transform: translate(0, 0); }
+  }
+  .music {
+    font-size: 5em;
+    animation: music 4s linear infinite;
+  }
+  
+  .music-2 {
+    left: -5%;
+    animation-delay: -2s;
+  }
+
+  #info{
+    background-color: rgba(250, 249, 249, 0.774);
+    border-radius: 0px;
+  }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  .card-section {
+    margin: 15px 0 20px 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+
+  
+  .card-section > h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #3ae7df;
+  }
+  
+  .card-section > h4 {
+    color: #999;
+    margin-top: 3px;
+    margin-bottom: 6px;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 520px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
+    transform: scale3d(1, 1, 1);
+    transition: all 0.2s ease-out, filter 0.75s ease-out;
+    background: rgba(0,0,0,0.2);
+    filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+  }
+  
+  .card:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 15px rgba(0,0,0,0.3);
+    filter: grayscale(0) saturate(105%) brightness(100%) contrast(100%);
+    
+  }
+  
+  .card > img {
+    position: absolute;
+    width: 108%;
+    height: 108%;
+    top: -4%;
+    left: -4%;
+    z-index: -10;
+    transform: scale(1.05);
+    transition: all 0.2s ease-out, transform 0.2s ease-out, filter 0.75s ease-out;
+    filter: blur(0px);
+  }
+  
+  .card.blur > img {
+    filter: blur(1px) grayscale(0.1) saturate(95%);
+  }
+  
+  .card > .shineLayer {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 80%);
+    transition: all 0.2s ease-out;
+  }
